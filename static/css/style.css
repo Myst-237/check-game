@@ -44,10 +44,17 @@ body {
     width: 170px;
     height: 230px;
 }
+
 .card-1, .card-2, .card-3, .card-4{
     position: absolute;
     top: 40px;
+    transition: transform .2s;
 }
+
+.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover{
+    transform: scale(1.1);
+}
+
 .card-1{
     left: 10px;
     z-index: 1;

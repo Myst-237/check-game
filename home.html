@@ -86,23 +86,19 @@
                 <div class="row playingboard">
                     <div class="col-sm-4 playerboard" >
                          <h4> n<sup>o</sup> cards:</h4>
-                        <div class="cardimg">
-                            <img class="card-1" src="static/images/cards/AH.png"/>
-                            <img class="card-2" src="static/images/cards/AH.png"/>
-                            <img class="card-3" src="static/images/cards/AH.png"/>
+                        <div id="player-1">
+                           
                         </div>
                     </div>
                     <div class="col-sm-4 displayboard" >
-                        <div class="cardimg">
-                                <img class="card-4" src="static/images/cards/KC.png"/>
+                        <div id="board">
+                               
                         </div>
                         </div>
                     <div class="col-sm-4 playerboard">
                         <h4> n<sup>o</sup> cards:</h4>
-                        <div class="cardimg">
-                                <img class="card-1" src="static/images/cards/QD.png"/>
-                                <img class="card-2" src="static/images/cards/QD.png"/>
-                                <img class="card-3" src="static/images/cards/QD.png"/>
+                        <div id="player-2">
+                         
                         </div>
                     </div>
                 </div>
@@ -113,7 +109,7 @@
                                 <button type="button " class="btn btn-primary"> Fatal finish</button>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button " class="btn btn-danger" onclick=deal()> start</button>
+                                <button type="button " id="start-btn" class="btn btn-danger"> start</button>
                             </div>
                             <div class="player2-option col-sm-5 pl-5 d-flex justify-content-end">
                                 <button type="button " class="btn btn-success"> Tap</button>
@@ -126,23 +122,23 @@
     </div>
     <div class="dealboard mt-2">
             <div class="row">
-                <div class="col">
+                <div id="dealboard-deck" class="col ">
                   
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                   <p>card left: 29</p>
+                   <p>card left: <span id="dealbaord-card"> </span></p>
                 </div>
             </div>
         </div>
 </div>
    
     <script src="static/js/check.js"></script>
-    <script src="static/js/bootstrap.js"></script>
-    <script src="static/js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/bootstrap.bundle.js"></script>
+</body>
 </html>

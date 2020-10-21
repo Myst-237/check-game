@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title> Check </title>
+        <link href="static/css/style.css" type="text/css" rel="stylesheet" />
+        <link href="static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+       <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                        <img class="logo" src="static/images/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="CardCheck">
+                        CardCheck
+                      </a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"> Home </a><span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Option
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Game setting</a>
+                            <a class="dropdown-item" href="#">Theme</a>
+                        </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Help </a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text ">
+                        <a href="#">SignIn<a/>/<a href="#"> Logout</a>
+                      </span>
+                </div>
+           </nav>
+       </div>
+<div class="board container-fluid mt-3 ">
+    <div class="row">
+        <div class="col-sm-2 dashboard">
+            <h2> Dash board</h2>
+            <ul>
+                <li>
+                    <a href="#" >play against computer</a>
+                </li>
+                <li>
+                    <a href="#">play game</a>
+                </li>
+                <li>
+                   <a href="#"> game session </a>
+                    <ul>
+                        <li>
+                            player 1:name
+                        </li>
+                        <li>
+                            player 2:name
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    scores
+                    <ul>
+                        <li>
+                            player 1: score
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    stats
+                    <ol>
+                        <li>
+                            Player 1
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#"> leave session </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 gameboard">
+                <div class="row playingboard">
+                    <div class="col-sm-4 playerboard" >
+                         <h4> n<sup>o</sup> cards:</h4>
+                        <div class="cardimg">
+                            <img class="card-1" src="static/images/cards/AH.png"/>
+                            <img class="card-2" src="static/images/cards/AH.png"/>
+                            <img class="card-3" src="static/images/cards/AH.png"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 displayboard" >
+                        <div class="cardimg">
+                                <img class="card-4" src="static/images/cards/KC.png"/>
+                        </div>
+                        </div>
+                    <div class="col-sm-4 playerboard">
+                        <h4> n<sup>o</sup> cards:</h4>
+                        <div class="cardimg">
+                                <img class="card-1" src="static/images/cards/QD.png"/>
+                                <img class="card-2" src="static/images/cards/QD.png"/>
+                                <img class="card-3" src="static/images/cards/QD.png"/>
+                        </div>
+                    </div>
+                </div>
+               <div class="options pb-3">
+                    <div class="row">
+                            <div class="col-sm-3 pl-5">
+                                <button type="button " class="btn btn-success"> Tap</button>
+                            </div>
+                            <div class="col-sm-3">
+                                    <button type="button " class="btn btn-warning"> Shuffle</button>
+                                </div>
+                                <div class="col-sm-3">
+                                        <button type="button " class="btn btn-danger"> Deal</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <button type="button " class="btn btn-primary"> Fatal finish</button>
+                                        </div>
+                        </div>
+               </div>
+        </div>
+    </div>
+    <div class="dealboard mt-2">
+            <div class="row">
+                <div class="col">
+                  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                   <p>card left: 29</p>
+                </div>
+            </div>
+        </div>
+</div>
+   
+    <script src="static/js/check.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

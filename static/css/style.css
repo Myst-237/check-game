@@ -1,0 +1,62 @@
+body {
+    background-image: url("../images/background2.png");
+}
+
+.dashboard {
+    background-color: white;
+    border:1px solid black;
+    margin-left: 35px;
+}
+
+.dashboard a{
+    color: red;
+}
+
+.gameboard{
+    background-image: url("../images/background.jpg");
+    margin-left: 10px;
+}
+
+.playingboard{
+    height: 400px;
+}
+
+.displayboard{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.options{
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+.dealboard{
+    background-image: url("../images/background.jpg");
+    margin-bottom: 20px;
+    height: 300px;
+    width: 300px;
+    margin-left: 770px;
+}
+.cardimg{
+   
+}
+.cardimg img{
+    width: 170px;
+    height: 230px;
+}
+.card-1, .card-2, .card-3, .card-4{
+    position: absolute;
+    top: 40px;
+}
+.card-1{
+    left: 10px;
+    z-index: 1;
+}
+.card-2{
+    left: 40px;
+    z-index: 2;
+}
+.card-3{
+    left: 70px;
+    z-index: 3;
+}

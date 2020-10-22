@@ -39,9 +39,17 @@ body {
     margin-left: 770px;
 }
 
-.playerboard img, .displayboard img, .dealboard img{
+.playerboard img, .displayboard img {
     width: 100px;
     height: 130px;
+}
+
+.displayboard img {
+  position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 150px;
+    height: 200px;
 }
 
 #player-1 img, #player-2 img{
@@ -54,7 +62,7 @@ body {
 }
 
 #player-1, #player-2{
-   
+
 }
 
 .card-1{ left: 10px; top: 40px;z-index: 1;}.card-2{ left: 40px; top: 40px;z-index: 2;}.card-3{left: 70px; top: 40px;z-index: 3;}
@@ -63,3 +71,12 @@ body {
 .card-10{left: 40px; top: 185px; z-index: 2;}.card-11{left: 70px; top: 185px;z-index: 3;}.card-12{left: 100px; top: 185px;z-index: 4;}
 .card-13{ left: 130px;top: 185px;z-index: 5;}.card-14{ left: 160px;top: 185px;z-index: 6;}.card-15{left: 190px;top: 185px;z-index: 7;}
 .card-16{left: 220px;top: 185px; z-index: 8;}
+
+/*
+
+.card-1{ left: 10px; top: 40px;z-index: 1;}.card-2{ left: 40px; top: 40px;z-index: 2;}.card-3{left: 70px; top: 40px;z-index: 3;}
+.card-4{left: 100px; top: 40px; z-index: 4;}.card-5{left: 130px; top: 40px;z-index: 5;}.card-6{left: 160px; top: 40px;z-index: 6;}
+.card-7{ left: 190px; top: 40px;z-index: 7;}.card-8{ left: 220px; top: 40px;z-index: 8;}.card-9{left: 10px; top: 185px;z-index: 1;}
+.card-10{left: 40px; top: 185px; z-index: 2;}.card-11{left: 70px; top: 185px;z-index: 3;}.card-12{left: 100px; top: 185px;z-index: 4;}
+.card-13{ left: 130px;top: 185px;z-index: 5;}.card-14{ left: 160px;top: 185px;z-index: 6;}.card-15{left: 190px;top: 185px;z-index: 7;}
+.card-16{left: 220px;top: 185px; z-index: 8;} */

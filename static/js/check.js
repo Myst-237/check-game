@@ -40,11 +40,12 @@ document.querySelector('#start-btn').addEventListener('click', start);
  contains all the start function properties
 */
 function start(){
-    deal_to(player1,10);
-    deal_to(player2,10);
-    fill_dealboard();
+    deal_to(player1,6);
+    deal_to(player2,6);
     display_player_num_of_cards(player1);
     display_player_num_of_cards(player2);
+    initial_board_card();
+    fill_dealboard();
     document.getElementById('start-btn').style.display = "none";
 }
 
@@ -82,15 +83,24 @@ function showcard_to_player(card, player, j){
         cardImage.className = `card-${j}`;
         cardImage.setAttribute("name",card);
         cardImage.classList.add(player.name + '-card');
-        const source = `static/images/cards/${card}.png`;
         document.querySelector(player.div).appendChild(cardImage);
         $(cardImage).click(play);
 }
 
-// select a random card from the board
+// select a random card from the playing deck
 function randomcard(){
     let randomindex = Math.floor(Math.random() * playing_deck.length);
     return playing_deck[randomindex];
+}
+
+//places a card on the board at start of a game
+function initial_board_card(){
+    let card = randomcard();
+    let img = document.createElement('img');
+    img.src = `static/images/cards/${card}.png`;
+    img.className = 'board-card';
+    document.querySelector('#board').appendChild(img);
+    remove_card_from_dealboard(card);
 }
 
 // remove a card from the dealboard

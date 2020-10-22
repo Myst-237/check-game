@@ -48,9 +48,9 @@ function start(){
     document.getElementById('start-btn').style.display = "none";
 }
 
-//function to allow a player to play a cardDetail
-function play(){
-
+//function to allow a player to play a card
+function play(card){
+    move_card_to_board(card);
 }
 // fill the deal board function
 /*
@@ -84,7 +84,7 @@ function showcard_to_player(card, player, j){
         cardImage.classList.add(player.name + '-card');
         const source = `static/images/cards/${card}.png`;
         document.querySelector(player.div).appendChild(cardImage);
-        $(cardImage).click(move_card_to_board);
+        $(cardImage).click(play);
 }
 
 // select a random card from the board
@@ -105,7 +105,7 @@ function remove_card_from_dealboard(card){
     playing_deck = clone;
 }
 
-// count player cards
+// display player cards
 function display_player_num_of_cards(player){
     document.querySelector(player.div + '-cardnum').innerHTML = player.cards.length;
 }
@@ -114,23 +114,20 @@ function display_player_num_of_cards(player){
 function move_card_to_board(card){
   document.querySelector('.board-card').src = card.target.src;
   let name = card.target.name;
-  var cardsLeft;
-  if (card.target.parentNode.id === "player-1") {
-    let section = document.querySelector("#player-1");
-    cardsLeft = player1.cards.filter(cardName => !cardName.includes(name));
-    player1.cards = cardsLeft;
+  var cardsLeft, player, section;
+  if(card.target.parentNode.id === "player-1"){
+      player = player1;
+      section = document.querySelector("#player-1");
+  }
+  else if(card.target.parentNode.id === "player-2"){
+      player = player2;
+      section = document.querySelector("#player-2");
+  }
+    cardsLeft = player.cards.filter(cardName => !cardName.includes(name));
+    player.cards = cardsLeft;
     section.innerHTML = "";
-    displayCards(player1, section);
-    display_player_num_of_cards(player1);
-   }
-  else if (card.target.parentNode.id === "player-2") {
-    let section = document.querySelector("#player-2");
-    cardsLeft = player2.cards.filter(cardName => !cardName.includes(name));
-    player2.cards = cardsLeft;
-    section.innerHTML = "";
-    displayCards(player2, section);
-    display_player_num_of_cards(player2);
-    }
+    displayCards(player, section);
+    display_player_num_of_cards(player);
 }
 
 //display cards to player
